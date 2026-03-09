@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="id" class="h-full scroll-smooth">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Tenant - Inkubasi Bisnis Teknologi Cimahi Techno Park</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFP2xYt3DARFAqrz2zfTuECbSet-BAW5MfAg&s">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Plus Jakarta Sans', sans-serif; }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #0369a1 0%, #0284c7 50%, #0369a1 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(3, 105, 161, 0.15);
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    }
+    
+    .tenant-card {
+      transition: all 0.3s ease;
+    }
+    
+    .tenant-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(3, 105, 161, 0.2);
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fbbf24;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .floating-shape {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .pulse-ring {
+      animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    }
+    
+    @keyframes pulse-ring {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f0f9ff;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #0369a1;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #fbbf24;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0369a1',
+            secondary: '#0284c7',
+            accent: '#fbbf24',
+            light: '#f0f9ff'
+          }
+        }
+      }
+    }
+  </script>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-white text-gray-800 overflow-auto">
+  <div id="app-wrapper" class="w-full h-full"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between items-center h-16 md:h-20">
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+      <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+  <img 
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFP2xYt3DARFAqrz2zfTuECbSet-BAW5MfAg&s"
+    alt="Logo CTP"
+    class="w-full h-full object-contain rounded-lg"
+  >
+</div>
+       </div>
+       <div class="hidden sm:block"><span class="text-sm md:text-base font-bold text-primary">Cimahi Techno Park</span> <span class="block text-xs text-gray-500">Inkubasi Bisnis Teknologi</span>
+       </div>
+      </div>
+      <div class="hidden md:flex items-center gap-8"><a href="#profil" class="nav-link text-sm font-medium text-gray-600 hover:text-primary">Profil</a> <a href="#tenant" class="nav-link text-sm font-medium text-gray-600 hover:text-primary">Tenant</a> <a href="#kontak" class="nav-link text-sm font-medium text-gray-600 hover:text-primary">Kontak</a>
+      </div><button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+       <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+     <div class="px-4 py-3 space-y-2"><a href="#profil" class="block py-2 text-gray-600 hover:text-primary">Profil</a> <a href="#tenant" class="block py-2 text-gray-600 hover:text-primary">Tenant</a> <a href="#kontak" class="block py-2 text-gray-600 hover:text-primary">Kontak</a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="hero" class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-20"><!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="floating-shape absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+     <div class="floating-shape absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" style="animation-delay: -3s;"></div>
+     <div class="absolute top-1/4 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+     <div class="absolute bottom-1/3 left-1/3 w-3 h-3 bg-accent/50 rounded-full animate-pulse" style="animation-delay: -1s;"></div><!-- Grid Pattern -->
+     <div class="absolute inset-0 opacity-5">
+      <svg width="100%" height="100%"><defs>
+        <pattern id="grid" width="40" height="40" patternunits="userSpaceOnUse">
+         <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+        </pattern>
+       </defs> <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+     </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
+       <div class="fade-in inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6"><span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span> <span class="text-accent text-sm font-medium">Inkubasi Bisnis Teknologi</span>
+       </div>
+       <h1 id="hero-title" class="fade-in text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">KATALOG TENANT<br><span class="text-accent">INKUBASI BISNIS</span><br>
+         TEKNOLOGI</h1>
+       <p id="hero-subtitle" class="fade-in text-lg sm:text-xl text-blue-100 mb-8 max-w-xl mx-auto lg:mx-0">Membangun Ekosistem Inovasi dan Teknologi untuk Meningkatkan Daya Saing Daerah</p>
+       <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"><a href="#tenant" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-yellow-400 text-primary font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-accent/30"> <span>Lihat Tenant</span>
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+         </svg></a> <a href="#pengantar" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-4 rounded-xl backdrop-blur-sm transition-all"> <span>Pelajari Lebih</span>
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </div><!-- Hero Illustration -->
+      <div class="fade-in-right hidden lg:block relative">
+       <div class="relative w-full aspect-square max-w-lg mx-auto"><!-- Main Circle -->
+        <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-full animate-pulse"></div>
+        <div class="absolute inset-4 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center"><!-- Inner Content -->
+         <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-accent/20 rounded-2xl flex items-center justify-center">
+           <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+           </svg>
+          </div><span class="text-white font-semibold">Innovation Hub</span>
+         </div>
+        </div><!-- Floating Elements -->
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-2xl flex items-center justify-center shadow-xl floating-shape">
+         <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+         </svg>
+        </div>
+        <div class="absolute -bottom-2 -left-2 w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-xl floating-shape" style="animation-delay: -2s;">
+         <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+         </svg>
+        </div>
+        <div class="absolute top-1/2 -left-8 w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shadow-xl floating-shape" style="animation-delay: -4s;">
+         <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+       </div>
+      </div>
+     </div><!-- Scroll Indicator -->
+     <div class="fade-in absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"><span class="text-blue-100 text-sm">Scroll untuk menjelajahi</span>
+      <div class="w-6 h-10 border-2 border-blue-100 rounded-full flex justify-center pt-2">
+       <div class="w-1.5 h-3 bg-accent rounded-full animate-bounce"></div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Kata Pengantar -->
+  <!-- SECTION KATA PENGANTAR -->
+<section id="pengantar" class="scroll-mt-24 py-24 bg-white relative z-10">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    
+    <!-- Judul -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+        Kata Pengantar
+      </h2>
+      <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Card Content -->
+    <div class="bg-light rounded-3xl shadow-xl p-8 md:p-12 leading-relaxed text-gray-700 text-justify space-y-6">
+      
+      <p>
+        Puji dan syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya,
+        sehingga Katalog Tenant Inkubasi Bisnis Teknologi Cimahi Techno Park ini dapat disusun dan dipublikasikan.
+        Katalog ini merupakan bagian dari komitmen kami dalam mendukung pengembangan ekosistem inovasi,
+        kewirausahaan, dan teknologi di Kota Cimahi.
+      </p>
+
+      <p>
+        Melalui program Inkubasi Bisnis Teknologi, Cimahi Techno Park berupaya memberikan pendampingan,
+        fasilitasi, serta penguatan kapasitas bagi para tenant agar mampu tumbuh secara berkelanjutan,
+        berdaya saing, dan siap memasuki pasar yang lebih luas.
+      </p>
+
+      <p>
+        Katalog ini menampilkan profil tenant binaan yang telah melalui proses seleksi dan pembinaan,
+        mencerminkan semangat inovasi, kreativitas, dan profesionalisme dalam mengembangkan produk dan layanan berbasis teknologi.
+      </p>
+
+      <p>
+        Kami berharap katalog ini dapat menjadi media informasi, promosi, sekaligus sarana kolaborasi
+        antara tenant, mitra industri, akademisi, investor, dan seluruh pemangku kepentingan.
+      </p>
+
+      <p class="font-semibold text-primary pt-6">
+        Cimahi Techno Park <br> 
+        Inkubasi Bisnis Teknologi
+      </p>
+
+    </div>
+
+  </div>
+</section>
+   <!-- Divider -->
+   <div class="section-divider max-w-6xl mx-auto"></div><!-- Daftar Isi -->
+   <section id="daftar-isi" class="py-20 lg:py-32 bg-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Navigasi</span>
+      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Daftar Isi</h2>
+      <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+     </div>
+     <div class="grid md:grid-cols-2 gap-4"><a href="#profil" class="fade-in card-hover bg-white p-6 rounded-2xl flex items-center gap-4 group">
+       <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"><span class="text-white font-bold text-lg">01</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-primary group-hover:text-secondary transition-colors">Profil Singkat Lembaga</h3>
+        <p class="text-sm text-gray-500">Visi, Misi, dan Statistik</p>
+       </div>
+       <svg class="w-5 h-5 text-gray-400 ml-auto group-hover:text-accent group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+       </svg></a> <a href="#tenant-tahun" class="fade-in card-hover bg-white p-6 rounded-2xl flex items-center gap-4 group">
+       <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"><span class="text-white font-bold text-lg">02</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-primary group-hover:text-secondary transition-colors">Daftar Tenant per Tahun</h3>
+        <p class="text-sm text-gray-500">Tenant 2025, 2024, 2023</p>
+       </div>
+       <svg class="w-5 h-5 text-gray-400 ml-auto group-hover:text-accent group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+       </svg></a> <a href="#tenant" class="fade-in card-hover bg-white p-6 rounded-2xl flex items-center gap-4 group">
+       <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"><span class="text-white font-bold text-lg">03</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-primary group-hover:text-secondary transition-colors">Profil Tenant</h3>
+        <p class="text-sm text-gray-500">Detail Setiap Tenant</p>
+       </div>
+       <svg class="w-5 h-5 text-gray-400 ml-auto group-hover:text-accent group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+       </svg></a> <a href="#penutup" class="fade-in card-hover bg-white p-6 rounded-2xl flex items-center gap-4 group">
+       <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"><span class="text-white font-bold text-lg">04</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-primary group-hover:text-secondary transition-colors">Penutup</h3>
+        <p class="text-sm text-gray-500">Kesimpulan &amp; Kontak</p>
+       </div>
+       <svg class="w-5 h-5 text-gray-400 ml-auto group-hover:text-accent group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+       </svg></a>
+     </div>
+    </div>
+   </section><!-- Divider -->
+   <div class="section-divider max-w-6xl mx-auto"></div><!-- Profil Lembaga -->
+   <section id="profil" class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Tentang Kami</span>
+      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Profil Singkat Lembaga</h2>
+      <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+      <p class="fade-in text-gray-600 max-w-2xl mx-auto">Inkubasi Bisnis Teknologi Cimahi Techno Park</p>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+      <div class="fade-in-left">
+       <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl blur-xl"></div>
+        <div class="relative bg-gradient-to-br from-primary to-secondary p-8 md:p-12 rounded-3xl">
+         <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+         </div>
+         <p class="text-blue-100 leading-relaxed">Inkubasi Bisnis Teknologi Cimahi Techno Park merupakan unit layanan yang berfokus pada pembinaan dan pengembangan startup berbasis teknologi. Didirikan dengan semangat untuk mendorong pertumbuhan ekonomi kreatif dan inovasi di Kota Cimahi dan sekitarnya, lembaga ini menyediakan berbagai fasilitas dan program pendampingan bagi para pelaku usaha rintisan.</p>
+         <p class="text-blue-100 leading-relaxed mt-4">Melalui pendekatan holistik yang mencakup mentoring bisnis, akses pendanaan, networking, dan pengembangan produk, kami berkomitmen untuk menciptakan ekosistem yang kondusif bagi tumbuh kembangnya wirausaha teknologi yang tangguh dan berdaya saing.</p>
+        </div>
+       </div>
+      </div>
+      <div class="fade-in-right space-y-6"><!-- Visi -->
+       <div class="bg-light p-6 rounded-2xl border border-blue-100">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+          <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-primary">Visi</h3>
+        </div>
+        <p class="text-gray-600">Menjadi pusat inkubasi inovasi yang profesional, transparan, dan berkelanjutan dalam mengembangkan wirausaha teknologi yang berdaya saing global.</p>
+       </div><!-- Misi -->
+       <div class="bg-light p-6 rounded-2xl border border-blue-100">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+          <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-primary">Misi</h3>
+        </div>
+        <ul class="space-y-3">
+         <li class="flex items-start gap-3"><span class="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"> <span class="w-2 h-2 bg-accent rounded-full"></span> </span> <span class="text-gray-600">Mengembangkan ekosistem inovasi berbasis IPTEK</span></li>
+         <li class="flex items-start gap-3"><span class="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"> <span class="w-2 h-2 bg-accent rounded-full"></span> </span> <span class="text-gray-600">Meningkatkan produktivitas dan daya saing tenant</span></li>
+         <li class="flex items-start gap-3"><span class="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"> <span class="w-2 h-2 bg-accent rounded-full"></span> </span> <span class="text-gray-600">Memperkuat kolaborasi dengan akademisi, industri, komunitas, dan pemerintah</span></li>
+        </ul>
+       </div>
+      </div>
+     </div><!-- Statistics -->
+     <div class="grid sm:grid-cols-3 gap-6">
+      <div class="scale-in stat-card p-8 rounded-2xl border border-blue-100 text-center group hover:border-accent/30 transition-colors">
+       <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div>
+       <div class="text-4xl font-bold text-primary mb-2">
+        25+
+       </div>
+       <div class="text-gray-500">
+        Tenant Aktif
+       </div>
+      </div>
+      <div class="scale-in stat-card p-8 rounded-2xl border border-blue-100 text-center group hover:border-accent/30 transition-colors" style="transition-delay: 0.1s;">
+       <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+       </div>
+       <div class="text-4xl font-bold text-primary mb-2">
+        50+
+       </div>
+       <div class="text-gray-500">
+        Alumni Tenant
+       </div>
+      </div>
+      <div class="scale-in stat-card p-8 rounded-2xl border border-blue-100 text-center group hover:border-accent/30 transition-colors" style="transition-delay: 0.2s;">
+       <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        </svg>
+       </div>
+       <div class="text-4xl font-bold text-primary mb-2">
+        8
+       </div>
+       <div class="text-gray-500">
+        Sektor Industri
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Divider -->
+   <div class="section-divider max-w-6xl mx-auto"></div><!-- Daftar Tenant per Tahun -->
+   <section id="tenant-tahun" class="py-20 lg:py-32 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Timeline</span>
+      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Daftar Tenant per Tahun</h2>
+      <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+      <p class="fade-in text-gray-600 max-w-2xl mx-auto">Tenant yang telah bergabung dalam program inkubasi</p>
+     </div><!-- 2025 -->
+     <div class="mb-16">
+      <div class="fade-in flex items-center gap-4 mb-8">
+       <div class="w-20 h-20 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl flex items-center justify-center shadow-lg"><span class="text-white font-bold text-2xl">2025</span>
+       </div>
+       <div>
+        <h3 class="text-2xl font-bold text-primary">Batch 2025</h3>
+        <p class="text-gray-500">Tenant Tahun Ini</p>
+       </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- khumbu -->
+         <a href="#khumbu" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <div class="flex items-center gap-4 mb-4">
+         <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">K</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-primary group-hover:text-secondary transition-colors">Khumbu</h4>
+          <p class="text-sm text-gray-500">Tech Solutions</p>
+         </div>
+        </div><p class="text-gray-600 text-sm">Platform digital untuk solusi teknologi berkelanjutan</p>
+        <div class="mt-4 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform"><span>Lihat Profil</span>
+         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg>
+        </div></a> 
+        <!-- venma -->
+        <a href="#venma" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <div class="flex items-center gap-4 mb-4">
+         <div class="w-14 h-14 bg-gradient-to-br from-violet-400 to-violet-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">V</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-primary group-hover:text-secondary transition-colors">Venma</h4>
+          <p class="text-sm text-gray-500">Digital Agency</p>
+         </div>
+        </div><p class="text-gray-600 text-sm">Agensi digital kreatif untuk transformasi bisnis</p>
+        <div class="mt-4 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform"><span>Lihat Profil</span>
+         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg>
+        </div></a> 
+        <!-- mir-game -->
+         <a href="#mir-game" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <div class="flex items-center gap-4 mb-4">
+         <div class="w-14 h-14 bg-gradient-to-br from-rose-400 to-rose-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">M</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-primary group-hover:text-secondary transition-colors">MIR Game Studio</h4>
+          <p class="text-sm text-gray-500">Game Development</p>
+         </div>
+        </div><p class="text-gray-600 text-sm">Studio pengembangan game mobile dan PC berkualitas</p>
+        <div class="mt-4 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform"><span>Lihat Profil</span>
+         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg>
+        </div></a> 
+        <!-- asa -->
+         <a href="#asa" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <div class="flex items-center gap-4 mb-4">
+         <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">A</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-primary group-hover:text-secondary transition-colors">ASA (Akar Semesta)</h4>
+          <p class="text-sm text-gray-500">Sekolah Montessori</p>
+         </div>
+        </div><p class="text-gray-600 text-sm">Pendidikan Anak Berbasis Metode Montessori & Pembelajaran Holistik</p>
+        <div class="mt-4 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform"><span>Lihat Profil</span>
+         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg>
+        </div></a> 
+        <!-- bytes -->
+         <a href="#bytes" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <div class="flex items-center gap-4 mb-4">
+         <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">B</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-primary group-hover:text-secondary transition-colors">BYTES</h4>
+          <p class="text-sm text-gray-500">Software Development</p>
+         </div>
+        </div><p class="text-gray-600 text-sm">Pengembangan software custom untuk kebutuhan enterprise</p>
+        <div class="mt-4 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform"><span>Lihat Profil</span>
+         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg>
+        </div></a>
+      </div>
+     </div><!-- 2024 -->
+     <div class="mb-16">
+      <div class="fade-in flex items-center gap-4 mb-8">
+       <div class="w-20 h-20 bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl flex items-center justify-center shadow-lg"><span class="text-white font-bold text-2xl">2024</span>
+       </div>
+       <div>
+        <h3 class="text-2xl font-bold text-primary">Batch 2024</h3>
+        <p class="text-gray-500">Segera Hadir</p>
+       </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+       <div class="fade-in bg-white p-8 rounded-2xl border border-gray-200 flex items-center justify-center min-h-48">
+        <div class="text-center">
+         <svg class="w-12 h-12 text-gray-300 mx-auto mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+         <p class="text-gray-400 font-medium">Segera Hadir</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- 2023 -->
+     <div>
+      <div class="fade-in flex items-center gap-4 mb-8">
+       <div class="w-20 h-20 bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl flex items-center justify-center shadow-lg"><span class="text-white font-bold text-2xl">2023</span>
+       </div>
+       <div>
+        <h3 class="text-2xl font-bold text-primary">Batch 2023</h3>
+        <p class="text-gray-500">Segera Hadir</p>
+       </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+       <div class="fade-in bg-white p-8 rounded-2xl border border-gray-200 flex items-center justify-center min-h-48">
+        <div class="text-center">
+         <svg class="w-12 h-12 text-gray-300 mx-auto mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+         <p class="text-gray-400 font-medium">Segera Hadir</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Divider -->
+   <div class="section-divider max-w-6xl mx-auto"></div><!-- Profil Tenant Section -->
+   <section id="tenant" class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Portfolio</span>
+      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Profil Tenant</h2>
+      <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+      <p class="fade-in text-gray-600 max-w-2xl mx-auto">Detail lengkap setiap tenant inkubasi</p>
+     </div>
+
+     <!-- Tenant 1: Khumbu -->
+<div id="khumbu" class="fade-in mb-20 scroll-mt-24">
+  <div class="bg-gray-100 py-20 px-6">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+
+      <!-- HEADER -->
+      <div class="bg-gradient-to-r from-emerald-500 to-green-600 text-white p-12">
+        <h2 class="text-3xl md:text-4xl font-bold">KHUMBU</h2>
+        <p class="mt-3 text-sm md:text-base opacity-90">
+          Sustainable Outdoor & Adventure Equipment Technology
+        </p>
+        <div class="mt-4 text-sm opacity-80">
+          Berdiri 2023 • Cimahi Techno Park
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="p-10 md:p-14 space-y-16">
+
+        <!-- PROFIL -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Perusahaan</h3>
+          <p class="text-gray-600 leading-relaxed">
+            KHUMBU merupakan startup yang bergerak di bidang pengembangan
+            produk dan teknologi perlengkapan outdoor berkelanjutan.
+            Fokus utama perusahaan adalah menghadirkan produk ramah lingkungan,
+            inovatif, dan tahan lama untuk mendukung aktivitas pendakian,
+            ekspedisi, dan kegiatan alam bebas.
+          </p>
+        </div>
+
+        <!-- PROBLEM & SOLUTION -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
+            <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Perlengkapan outdoor kurang ramah lingkungan</li>
+              <li>• Daya tahan produk belum optimal</li>
+              <li>• Minim inovasi berbasis teknologi lokal</li>
+            </ul>
+          </div>
+
+          <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl">
+            <h4 class="font-semibold text-emerald-600 mb-3 uppercase text-sm">Solusi</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Produk outdoor berbasis material eco-friendly</li>
+              <li>• Desain ergonomis dan tahan ekstrem</li>
+              <li>• Integrasi teknologi monitoring & safety</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PRODUK -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🏕️</div>
+              <div class="font-semibold text-gray-800">Smart Tent</div>
+              <div class="text-sm text-gray-500">Tenda tahan cuaca ekstrem</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🎒</div>
+              <div class="font-semibold text-gray-800">Eco Backpack</div>
+              <div class="text-sm text-gray-500">Tas berbahan daur ulang</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🧭</div>
+              <div class="font-semibold text-gray-800">Tracking Device</div>
+              <div class="text-sm text-gray-500">Monitoring lokasi & safety</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🧥</div>
+              <div class="font-semibold text-gray-800">Thermal Jacket</div>
+              <div class="text-sm text-gray-500">Jaket insulasi ramah lingkungan</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CAPAIAN -->
+        <div class="bg-gradient-to-r from-emerald-600 to-green-600 text-white p-10 rounded-3xl shadow-xl">
+          <h3 class="text-xl font-bold mb-8 text-center">Capaian & Perkembangan</h3>
+          <div class="grid sm:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-bold">120%</div>
+              <div class="text-sm opacity-80">Growth Tahunan</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">8</div>
+              <div class="text-sm opacity-80">Produk Aktif</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">5</div>
+              <div class="text-sm opacity-80">Mitra Distribusi</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">2</div>
+              <div class="text-sm opacity-80">Sertifikasi Produk</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KONTAK -->
+        <div class="bg-gray-50 border p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <div class="font-semibold text-gray-800">Email</div>
+              hello@khumbu.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Website</div>
+              www.khumbu.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Telepon</div>
+              +62 812 3456 7890
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Lokasi</div>
+              Cimahi Techno Park
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTON BACK -->
+        <div class="text-center pt-10">
+          <a href="#tenant-tahun"
+             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition hover:scale-105">
+            ← Kembali ke Daftar Tenant
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+ <!-- venma -->
+<div id="venma" class="fade-in mb-20 scroll-mt-24">
+  <div class="bg-gray-100 py-20 px-6">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+
+      <!-- HEADER -->
+      <div class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-12">
+        <h2 class="text-3xl md:text-4xl font-bold">VENMA</h2>
+        <p class="mt-3 text-sm md:text-base opacity-90">
+          Digital Marketing & Branding Solution
+        </p>
+        <div class="mt-4 text-sm opacity-80">
+          Berdiri 2023 • Cimahi, Jawa Barat
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="p-10 md:p-14 space-y-16">
+
+        <!-- PROFIL -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Singkat</h3>
+          <p class="text-gray-600 leading-relaxed">
+            VENMA merupakan startup yang bergerak di bidang digital marketing,
+            branding, dan pengembangan strategi konten. Fokus utama adalah membantu
+            UMKM dan bisnis rintisan meningkatkan visibilitas, penjualan, dan
+            positioning brand melalui pendekatan berbasis data dan kreativitas digital.
+          </p>
+        </div>
+
+        <!-- PROBLEM & SOLUTION -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
+            <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• UMKM belum optimal memanfaatkan digital marketing</li>
+              <li>• Branding tidak konsisten</li>
+              <li>• Minim strategi berbasis data</li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 border border-purple-200 p-6 rounded-2xl">
+            <h4 class="font-semibold text-purple-600 mb-3 uppercase text-sm">Solusi</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Strategi konten & campaign digital</li>
+              <li>• Branding & visual identity</li>
+              <li>• Optimasi iklan dan analitik performa</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PRODUK & LAYANAN -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">📱</div>
+              <div class="font-semibold text-gray-800">Social Media Management</div>
+              <div class="text-sm text-gray-500">Konten & Growth</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🎯</div>
+              <div class="font-semibold text-gray-800">Digital Ads</div>
+              <div class="text-sm text-gray-500">Meta & Google Ads</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🎨</div>
+              <div class="font-semibold text-gray-800">Branding Design</div>
+              <div class="text-sm text-gray-500">Logo & Identity</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">📊</div>
+              <div class="font-semibold text-gray-800">Analytics Report</div>
+              <div class="text-sm text-gray-500">Performance Insight</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CAPAIAN -->
+        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-10 rounded-3xl shadow-xl">
+          <h3 class="text-xl font-bold mb-8 text-center">Capaian</h3>
+          <div class="grid sm:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-bold">80+</div>
+              <div class="text-sm opacity-80">Klien UMKM</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">150+</div>
+              <div class="text-sm opacity-80">Campaign Digital</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">95%</div>
+              <div class="text-sm opacity-80">Client Retention</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">3</div>
+              <div class="text-sm opacity-80">Tahun Beroperasi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KONTAK -->
+        <div class="bg-gray-50 border p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <div class="font-semibold text-gray-800">Email</div>
+              info@venma.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Website</div>
+              www.venma.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Telepon</div>
+              +62 812 1234 5678
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Lokasi</div>
+              Cimahi, Jawa Barat
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTON BACK -->
+        <div class="text-center pt-10">
+          <a href="#tenant-tahun"
+             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-purple-600 hover:bg-purple-700 shadow-md transition hover:scale-105">
+            ← Kembali ke Daftar Tenant
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Tenant ASA -->
+<div id="asa" class="fade-in mb-20 scroll-mt-24">
+  <div class="bg-gray-100 py-20 px-6">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+
+      <!-- HEADER -->
+      <div class="bg-gradient-to-r from-amber-400 to-yellow-600 text-white p-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Akar Semesta Montessori (ASA)</h2>
+        <p class="mt-3 text-sm md:text-base opacity-90">
+          Pendidikan Anak Berbasis Metode Montessori & Pembelajaran Holistik
+        </p>
+        <div class="mt-4 text-sm opacity-80">
+          Berdiri 2021 • Cimahi, Jawa Barat
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="p-10 md:p-14 space-y-16">
+
+        <!-- PROFIL -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Lembaga</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Akar Semesta Montessori (ASA) merupakan lembaga pendidikan anak
+            yang mengadopsi metode Montessori dengan pendekatan holistik.
+            Fokus utama adalah membangun kemandirian, karakter, serta
+            kecerdasan anak melalui lingkungan belajar yang terstruktur,
+            eksploratif, dan sesuai dengan tahap perkembangan usia.
+          </p>
+        </div>
+
+        <!-- PROBLEM & SOLUTION -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
+            <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Pembelajaran terlalu berpusat pada guru</li>
+              <li>• Kurangnya pengembangan karakter & kemandirian</li>
+              <li>• Minim eksplorasi sesuai minat anak</li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 p-6 rounded-2xl">
+            <h4 class="font-semibold text-amber-600 mb-3 uppercase text-sm">Solusi</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Metode Montessori berbasis eksplorasi</li>
+              <li>• Lingkungan belajar terstruktur & aman</li>
+              <li>• Pengembangan karakter & life skill</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROGRAM -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Program & Layanan</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">👶</div>
+              <div class="font-semibold text-gray-800">Toddler Class</div>
+              <div class="text-sm text-gray-500">Usia 2–3 Tahun</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🧒</div>
+              <div class="font-semibold text-gray-800">Preschool</div>
+              <div class="text-sm text-gray-500">Usia 3–6 Tahun</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">📚</div>
+              <div class="font-semibold text-gray-800">Parenting Class</div>
+              <div class="text-sm text-gray-500">Edukasi Orang Tua</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🎨</div>
+              <div class="font-semibold text-gray-800">Creative Workshop</div>
+              <div class="text-sm text-gray-500">Motorik & Sensorik</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CAPAIAN -->
+        <div class="bg-gradient-to-r from-amber-500 to-yellow-600 text-white p-10 rounded-3xl shadow-xl">
+          <h3 class="text-xl font-bold mb-8 text-center">Capaian & Perkembangan</h3>
+          <div class="grid sm:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-bold">250+</div>
+              <div class="text-sm opacity-80">Siswa Terdaftar</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">4</div>
+              <div class="text-sm opacity-80">Program Aktif</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">15+</div>
+              <div class="text-sm opacity-80">Tenaga Pendidik</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">5</div>
+              <div class="text-sm opacity-80">Tahun Beroperasi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KONTAK -->
+        <div class="bg-gray-50 border p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <div class="font-semibold text-gray-800">Email</div>
+              info@akarsemmontessori.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Website</div>
+              www.akarsemmontessori.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Telepon</div>
+              +62 812 0000 1111
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Lokasi</div>
+              Cimahi, Jawa Barat
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTON BACK -->
+        <div class="text-center pt-10">
+          <a href="#tenant-tahun"
+             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-amber-500 hover:bg-amber-600 shadow-md transition hover:scale-105">
+            ← Kembali ke Daftar Tenant
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+     <!-- Tenant  MIR Game -->
+ <div id="mir-game" class="fade-in mb-20 scroll-mt-24">
+  <div class="bg-gray-100 py-20 px-6">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+
+      <!-- HEADER -->
+      <div class="bg-gradient-to-r from-rose-500 to-rose-600 text-white p-12">
+        <h2 class="text-3xl md:text-4xl font-bold">MIR Game Studio</h2>
+        <p class="mt-3 text-sm md:text-base opacity-90">
+          Startup Game, Augmented Reality & Virtual Reality Technology
+        </p>
+        <div class="mt-4 text-sm opacity-80">
+          Berdiri 2022 • Gedung BITC Lt. 4, Cimahi
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="p-10 md:p-14 space-y-16">
+
+        <!-- PROFIL -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Perusahaan</h3>
+          <p class="text-gray-600 leading-relaxed">
+            MIR Game Studio (PT Solusi Digital Membangun Indonesia) merupakan startup teknologi
+            yang bergerak di bidang pengembangan Game, Gamifikasi, Augmented Reality (AR),
+            dan Virtual Reality (VR). Perusahaan menghadirkan solusi digital interaktif
+            untuk sektor pendidikan, pemerintahan, dan korporasi melalui pengembangan
+            serious game, simulator VR, serta kampanye berbasis AR.
+          </p>
+        </div>
+
+        <!-- PROBLEM & SOLUTION -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
+            <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Kurangnya media pembelajaran interaktif</li>
+              <li>• Rendahnya engagement generasi digital</li>
+              <li>• Minimnya pemanfaatan AR/VR di instansi</li>
+            </ul>
+          </div>
+
+          <div class="bg-green-50 border border-green-100 p-6 rounded-2xl">
+            <h4 class="font-semibold text-green-500 mb-3 uppercase text-sm">Solusi</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Serious Game edukatif</li>
+              <li>• Simulator berbasis Virtual Reality</li>
+              <li>• AR Campaign untuk edukasi & promosi</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PRODUK -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🎮</div>
+              <div class="font-semibold text-gray-800">Game Development</div>
+              <div class="text-sm text-gray-500">PC & Mobile Custom</div>
+            </div>
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🧠</div>
+              <div class="font-semibold text-gray-800">Serious Game</div>
+              <div class="text-sm text-gray-500">Training & Edukasi</div>
+            </div>
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">📱</div>
+              <div class="font-semibold text-gray-800">Augmented Reality</div>
+              <div class="text-sm text-gray-500">AR Campaign</div>
+            </div>
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🕶️</div>
+              <div class="font-semibold text-gray-800">Virtual Reality</div>
+              <div class="text-sm text-gray-500">Immersive Simulator</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAPAIAN -->
+        <div class="bg-gradient-to-r from-rose-600 to-rose-500 text-white p-10 rounded-3xl shadow-xl">
+          <h3 class="text-xl font-bold mb-8 text-center">Capaian & Perkembangan</h3>
+          <div class="grid sm:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-bold">Rp 949 JT</div>
+              <div class="text-sm opacity-80">Omzet 2023–2024</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">15</div>
+              <div class="text-sm opacity-80">Proyek</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">10</div>
+              <div class="text-sm opacity-80">Partner</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">2 PT</div>
+              <div class="text-sm opacity-80">Legalitas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KONTAK -->
+        <div class="bg-gray-50 border p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <div class="font-semibold text-gray-800">Email</div>
+              fun@mirgame.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Website</div>
+              www.mirgame.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Telepon</div>
+              +62 895 7011 8774
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Lokasi</div>
+              Gedung BITC Lt. 4, Cimahi
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTON BACK -->
+        <div class="text-center pt-10">
+          <a href="#tenant-tahun"
+             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-rose-600 hover:bg-rose-700 shadow-md transition hover:scale-105">
+            ← Kembali ke Daftar Tenant
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Tenant Bytes -->
+<div id="bytes" class="fade-in mb-20 scroll-mt-24">
+  <div class="bg-gray-100 py-20 px-6">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+
+      <!-- HEADER -->
+      <div class="bg-gradient-to-r from-sky-400 to-blue-500 text-white p-12">
+        <h2 class="text-3xl md:text-4xl font-bold">BYTES</h2>
+        <p class="mt-3 text-sm md:text-base opacity-90">
+          Software Development & Technology Solution
+        </p>
+        <div class="mt-4 text-sm opacity-80">
+          Berdiri 2022 • Cimahi, Jawa Barat
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="p-10 md:p-14 space-y-16">
+
+        <!-- PROFIL -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Singkat</h3>
+          <p class="text-gray-600 leading-relaxed">
+            BYTES merupakan startup teknologi yang berfokus pada pengembangan
+            perangkat lunak, sistem informasi, dan solusi digital berbasis web
+            maupun mobile. BYTES membantu bisnis, lembaga pendidikan, dan
+            institusi pemerintah dalam melakukan transformasi digital secara
+            efektif dan terukur.
+          </p>
+        </div>
+
+        <!-- PROBLEM & SOLUTION -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
+            <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Proses bisnis masih manual</li>
+              <li>• Kurangnya sistem terintegrasi</li>
+              <li>• Minim keamanan & monitoring data</li>
+            </ul>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-6 rounded-2xl">
+            <h4 class="font-semibold text-sky-600 mb-3 uppercase text-sm">Solusi</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Pengembangan sistem custom</li>
+              <li>• Integrasi database & cloud</li>
+              <li>• Dashboard monitoring real-time</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PRODUK & LAYANAN -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">💻</div>
+              <div class="font-semibold text-gray-800">Web Development</div>
+              <div class="text-sm text-gray-500">Company Profile & System</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">📱</div>
+              <div class="font-semibold text-gray-800">Mobile App</div>
+              <div class="text-sm text-gray-500">Android & iOS</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">☁️</div>
+              <div class="font-semibold text-gray-800">Cloud Integration</div>
+              <div class="text-sm text-gray-500">Hosting & Deployment</div>
+            </div>
+
+            <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+              <div class="text-3xl mb-3">🔐</div>
+              <div class="font-semibold text-gray-800">IT Security</div>
+              <div class="text-sm text-gray-500">Data Protection</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TARGET PASAR -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Target Pasar</h3>
+          <p class="text-gray-600 leading-relaxed">
+            UMKM, institusi pendidikan, startup digital, serta instansi
+            pemerintahan yang membutuhkan sistem informasi terintegrasi
+            dan pengembangan aplikasi berbasis teknologi terkini.
+          </p>
+        </div>
+
+        <!-- CAPAIAN -->
+        <div class="bg-gradient-to-r from-sky-400 to-blue-500 text-white p-10 rounded-3xl shadow-xl">
+          <h3 class="text-xl font-bold mb-8 text-center">Capaian</h3>
+          <div class="grid sm:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-bold">40+</div>
+              <div class="text-sm opacity-80">Project Selesai</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">25+</div>
+              <div class="text-sm opacity-80">Klien Aktif</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">5</div>
+              <div class="text-sm opacity-80">Produk Sistem</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">3</div>
+              <div class="text-sm opacity-80">Tahun Beroperasi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KONTAK -->
+        <div class="bg-gray-50 border p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <div class="font-semibold text-gray-800">Email</div>
+              info@bytes.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Website</div>
+              www.bytes.id
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Telepon</div>
+              +62 812 9876 5432
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Lokasi</div>
+              Cimahi, Jawa Barat
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTON BACK -->
+        <div class="text-center pt-10">
+          <a href="#tenant-tahun"
+             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-sky-500 hover:bg-sky-600 shadow-md transition hover:scale-105">
+            ← Kembali ke Daftar Tenant
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div><!-- More Tenants indicator -->
+     <div class="text-center">
+      <p class="text-gray-500 mb-4">Dan masih banyak tenant lainnya...</p>
+      <div class="flex justify-center gap-3"><span class="w-3 h-3 bg-primary rounded-full"></span> <span class="w-3 h-3 bg-accent rounded-full"></span> <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Divider -->
+   <div class="section-divider max-w-6xl mx-auto"></div><!-- Penutup -->
+   <section id="penutup" class="py-20 lg:py-32 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Penutup</span>
+      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Penutup</h2>
+      <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+     </div>
+     <div class="fade-in bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-blue-100 mb-12">
+      <div class="space-y-4 text-gray-600 leading-relaxed">
+       <p>Demikian Katalog Tenant Inkubasi Bisnis Teknologi Cimahi Techno Park yang telah kami susun. Katalog ini merupakan bukti nyata dari kerja keras dan dedikasi seluruh tenant dalam mengembangkan inovasi dan teknologi untuk kemajuan bangsa.</p>
+       <p>Kami berharap katalog ini dapat memberikan gambaran yang komprehensif tentang potensi dan capaian para tenant kami. Bagi para pemangku kepentingan, investor, maupun mitra potensial, kami membuka pintu selebar-lebarnya untuk berkolaborasi dan bersinergi dalam membangun ekosistem inovasi yang lebih kuat.</p>
+       <p>Terima kasih kepada seluruh pihak yang telah berkontribusi dalam perjalanan inkubasi ini. Mari bersama-sama kita wujudkan Indonesia yang lebih inovatif dan berdaya saing global.</p>
+      </div>
+      <div class="mt-8 pt-6 border-t border-blue-100 text-center">
+       <p class="text-gray-500 italic">"Bersama Membangun Ekosistem Inovasi untuk Indonesia Maju"</p>
+      </div>
+     </div><!-- CTA -->
+     <div id="kontak" class="fade-in bg-gradient-to-br from-primary to-secondary p-8 md:p-12 rounded-3xl text-center scroll-mt-24">
+      <div class="w-16 h-16 mx-auto mb-6 bg-accent/20 rounded-2xl flex items-center justify-center">
+       <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+       </svg>
+      </div>
+      <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Mari Berkolaborasi!</h3>
+      <p class="text-blue-100 mb-8 max-w-xl mx-auto">Tertarik untuk bermitra atau ingin bergabung sebagai tenant? Hubungi kami sekarang dan jadilah bagian dari ekosistem inovasi Cimahi Techno Park.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="mailto:info@cimahitechnopark.id" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-yellow-400 text-primary font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-accent/30">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg><span>Hubungi Kami</span> </a> <a href="#hero" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-4 rounded-xl backdrop-blur-sm transition-all">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg><span>Kembali ke Atas</span> </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div><!-- Footer -->
+  <footer class="bg-primary py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8 mb-8"><!-- Brand -->
+     <div>
+      <div class="flex items-center gap-3 mb-4">
+       <div class="w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <div><span class="text-white font-bold">Cimahi Techno Park</span> <span class="block text-xs text-blue-200">Inkubasi Bisnis Teknologi</span>
+       </div>
+      </div>
+      <p class="text-blue-200 text-sm">Membangun ekosistem inovasi dan teknologi untuk meningkatkan daya saing daerah.</p>
+     </div><!-- Quick Links -->
+     <div>
+      <h4 class="text-white font-semibold mb-4">Navigasi</h4>
+      <ul class="space-y-2">
+       <li><a href="#profil" class="text-blue-200 hover:text-accent text-sm transition-colors">Profil Lembaga</a></li>
+       <li><a href="#tenant-tahun" class="text-blue-200 hover:text-accent text-sm transition-colors">Daftar Tenant</a></li>
+       <li><a href="#tenant" class="text-blue-200 hover:text-accent text-sm transition-colors">Profil Tenant</a></li>
+       <li><a href="#kontak" class="text-blue-200 hover:text-accent text-sm transition-colors">Kontak</a></li>
+      </ul>
+     </div><!-- Contact -->
+     <div>
+      <h4 class="text-white font-semibold mb-4">Kontak Kami</h4>
+      <ul class="space-y-2 text-sm text-blue-200">
+       <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg> Jl. Baros No. 63, Cimahi, Jawa Barat</li>
+       <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg><span id="contact-email">info@cimahitechnopark.id</span></li>
+       <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg> +62 22-1234-5678</li>
+      </ul>
+     </div>
+    </div>
+    <div class="pt-8 border-t border-blue-900 flex flex-col md:flex-row justify-between items-center gap-4">
+     <p class="text-blue-300 text-sm">© 2024 Cimahi Techno Park. All rights reserved.</p>
+     <div class="flex gap-4"><a href="#" class="w-10 h-10 bg-blue-900 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group">
+       <svg class="w-5 h-5 text-blue-200 group-hover:text-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+       </svg></a> <a href="#" class="w-10 h-10 bg-blue-900 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group">
+       <svg class="w-5 h-5 text-blue-200 group-hover:text-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+       </svg></a> <a href="#" class="w-10 h-10 bg-blue-900 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group">
+       <svg class="w-5 h-5 text-blue-200 group-hover:text-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+       </svg></a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_title: 'KATALOG TENANT',
+      hero_subtitle: 'Membangun Ekosistem Inovasi dan Teknologi untuk Meningkatkan Daya Saing Daerah',
+      contact_email: 'info@cimahitechnopark.id'
+    };
+
+    let config = { ...defaultConfig };
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (newConfig) => {
+          config = { ...defaultConfig, ...newConfig };
+          
+          // Update hero title
+          const heroTitle = document.getElementById('hero-title');
+          if (heroTitle) {
+            heroTitle.innerHTML = `${config.hero_title || defaultConfig.hero_title}<br><span class="text-accent">INKUBASI BISNIS</span><br>TEKNOLOGI`;
+          }
+          
+          // Update hero subtitle
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          if (heroSubtitle) {
+            heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+          }
+          
+          // Update contact email
+          const contactEmail = document.getElementById('contact-email');
+          if (contactEmail) {
+            contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
+          }
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['hero_title', config.hero_title || defaultConfig.hero_title],
+          ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+          ['contact_email', config.contact_email || defaultConfig.contact_email]
+        ])
+      });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close menu when clicking a link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Scroll animation observer
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector('nav');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.classList.add('shadow-md');
+      } else {
+        nav.classList.remove('shadow-md');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d6580b0d3db1c0e',t:'MTc3MjUwNzk5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
