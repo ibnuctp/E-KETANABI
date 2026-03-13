@@ -605,7 +605,7 @@ Innovation Hub
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- khumbu -->
-         <a href="#khumbu" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+         <a onclick="openTenant('popup-khumbu')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
          <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">K</span>
          </div>
@@ -619,15 +619,13 @@ Innovation Hub
          </svg>
         </div></a> 
         <!-- venma -->
-        <a href="#venma" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <a onclick="openTenant('popup-venma')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
-         <div class="w-14 h-14 bg-gradient-to-br from-violet-400 to-violet-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">V</span>
+         <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">V</span>
          </div>
          <div>
           <h4 class="font-semibold text-primary group-hover:text-secondary transition-colors">Venma</h4>
-          <p class="text-sm text-gray-500">Mesin Penjual Otomatis (Vending Machine)
-
-</p>
+          <p class="text-sm text-gray-500">Mesin Penjual Otomatis (Vending Machine)</p>
          </div>
         </div><p class="text-gray-600 text-sm">Penyedia inovatif mesin penjual otomatis di Indonesia</p>
         <div class="mt-4 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform"><span>Lihat Profil</span>
@@ -635,7 +633,7 @@ Innovation Hub
          </svg>
         </div></a> 
         <!-- mir-game -->
-         <a href="#mir-game" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+         <a onclick="openTenant('popup-mirgames')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
          <div class="w-14 h-14 bg-gradient-to-br from-rose-400 to-rose-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">M</span>
          </div>
@@ -649,7 +647,7 @@ Innovation Hub
          </svg>
         </div></a> 
         <!-- asa -->
-         <a href="#asa" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+         <a onclick="openTenant('popup-akar')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
          <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">A</span>
          </div>
@@ -663,7 +661,7 @@ Innovation Hub
          </svg>
         </div></a> 
         <!-- bytes -->
-         <a href="#bytes" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+         <a onclick="openTenant('popup-bytes')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">B</span>
          </div>
@@ -708,7 +706,7 @@ Innovation Hub
         </svg>
         </div>
         </a>
-                 <a href="#asa" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+        <a onclick="openTenant('popup-akar')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
          <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">A</span>
          </div>
@@ -722,7 +720,7 @@ Innovation Hub
          </svg>
         </div></a> 
         <!-- bytes -->
-         <a href="#bytes" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
+         <a onclick="openTenant('popup-bytes')" class="fade-in tenant-card bg-white p-6 rounded-2xl border border-gray-100 group cursor-pointer">
         <div class="flex items-center gap-4 mb-4">
          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-lg">B</span>
          </div>
@@ -2318,21 +2316,24 @@ Innovation Hub
    </section>
    <!-- Divider -->
    <div class="section-divider max-w-6xl mx-auto"></div><!-- Profil Tenant Section -->
-   <section id="tenant" class="py-20 lg:py-32 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Portfolio</span>
-      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Profil Tenant</h2>
-      <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-6"></div>
-      <p class="fade-in text-gray-600 max-w-2xl mx-auto">Detail lengkap setiap tenant inkubasi</p>
-     </div>
+
 
      <!-- Tenant 1: Khumbu -->
-<div id="khumbu" class="fade-in mb-20 scroll-mt-24">
-  <div class="bg-gray-100 py-20 px-6">
+<!-- POPUP KHUMBU -->
 
-    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+<div id="popup-khumbu" onclick="closeTenant('popup-khumbu')" 
+     class="fixed inset-0 bg-black/60 hidden z-50 overflow-y-auto backdrop-blur-sm">
 
-      <!-- HEADER -->
+  <div class="flex items-start justify-center min-h-screen p-6">
+    
+    <div onclick="event.stopPropagation()" 
+         class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden relative my-8">
+
+      <button onclick="closeTenant('popup-khumbu')"
+        class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold z-10">
+        ✕
+      </button>
+
       <div class="bg-gradient-to-r from-emerald-500 to-green-600 text-white p-12">
         <h2 class="text-3xl md:text-4xl font-bold">KHUMBU</h2>
         <p class="mt-3 text-sm md:text-base opacity-90">
@@ -2343,10 +2344,8 @@ Innovation Hub
         </div>
       </div>
 
-      <!-- BODY -->
       <div class="p-10 md:p-14 space-y-16">
 
-        <!-- PROFIL -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Perusahaan</h3>
           <p class="text-gray-600 leading-relaxed">
@@ -2358,7 +2357,6 @@ Innovation Hub
           </p>
         </div>
 
-        <!-- PROBLEM & SOLUTION -->
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
             <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
@@ -2379,39 +2377,32 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- PRODUK -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🏕️</div>
               <div class="font-semibold text-gray-800">Smart Tent</div>
               <div class="text-sm text-gray-500">Tenda tahan cuaca ekstrem</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🎒</div>
               <div class="font-semibold text-gray-800">Eco Backpack</div>
               <div class="text-sm text-gray-500">Tas berbahan daur ulang</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🧭</div>
               <div class="font-semibold text-gray-800">Tracking Device</div>
               <div class="text-sm text-gray-500">Monitoring lokasi & safety</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🧥</div>
               <div class="font-semibold text-gray-800">Thermal Jacket</div>
               <div class="text-sm text-gray-500">Jaket insulasi ramah lingkungan</div>
             </div>
-
           </div>
         </div>
 
-        <!-- CAPAIAN -->
         <div class="bg-gradient-to-r from-emerald-600 to-green-600 text-white p-10 rounded-3xl shadow-xl">
           <h3 class="text-xl font-bold mb-8 text-center">Capaian & Perkembangan</h3>
           <div class="grid sm:grid-cols-4 gap-8 text-center">
@@ -2434,49 +2425,40 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- KONTAK -->
         <div class="bg-gray-50 border p-8 rounded-2xl">
           <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
           <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <div class="font-semibold text-gray-800">Email</div>
-              hello@khumbu.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Website</div>
-              www.khumbu.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Telepon</div>
-              +62 812 3456 7890
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Lokasi</div>
-              Cimahi Techno Park
-            </div>
+            <div><div class="font-semibold text-gray-800">Email</div>hello@khumbu.id</div>
+            <div><div class="font-semibold text-gray-800">Website</div>www.khumbu.id</div>
+            <div><div class="font-semibold text-gray-800">Telepon</div>+62 812 3456 7890</div>
+            <div><div class="font-semibold text-gray-800">Lokasi</div>Cimahi Techno Park</div>
           </div>
         </div>
 
-        <!-- BUTTON BACK -->
-        <div class="text-center pt-10">
-          <a href="#tenant-tahun"
-             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition hover:scale-105">
-            ← Kembali ke Daftar Tenant
-          </a>
+        <div class="flex justify-center -mt-8 pb-4">
+          <button onclick="closeTenant('popup-khumbu')"
+            class="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 relative z-10">
+            Tutup Detail Pop-up
+          </button>
         </div>
 
-      </div>
+      </div> </div> </div> </div>
 
-    </div>
-  </div>
-</div>
+
  <!-- venma -->
-<div id="venma" class="fade-in mb-20 scroll-mt-24">
-  <div class="bg-gray-100 py-20 px-6">
+<div id="popup-venma" onclick="closeTenant('popup-venma')" 
+     class="fixed inset-0 bg-black/60 hidden z-50 overflow-y-auto backdrop-blur-sm">
 
-    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+  <div class="flex items-start justify-center min-h-screen p-6">
+    
+    <div onclick="event.stopPropagation()" 
+         class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden relative my-8">
 
-      <!-- HEADER -->
+      <button onclick="closeTenant('popup-venma')"
+        class="absolute top-4 right-4 text-gray-500 hover:text-orange-500 text-2xl font-bold z-10">
+        ✕
+      </button>
+
       <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-12">
         <h2 class="text-3xl md:text-4xl font-bold">VENMA</h2>
         <p class="mt-3 text-sm md:text-base opacity-90">
@@ -2487,10 +2469,8 @@ Innovation Hub
         </div>
       </div>
 
-      <!-- BODY -->
       <div class="p-10 md:p-14 space-y-16">
 
-        <!-- PROFIL -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Singkat</h3>
           <p class="text-gray-600 leading-relaxed">
@@ -2501,7 +2481,6 @@ Innovation Hub
           </p>
         </div>
 
-        <!-- PROBLEM & SOLUTION -->
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
             <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
@@ -2526,104 +2505,75 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- PRODUK & LAYANAN -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🛒</div>
               <div class="font-semibold text-gray-800">Vending Machine Standar</div>
               <div class="text-sm text-gray-500">Rp23.000.000 – Rp35.000.000</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">❄️</div>
               <div class="font-semibold text-gray-800">Vending Machine Chiller</div>
               <div class="text-sm text-gray-500">Rp42.000.000 – Rp65.000.000</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">💻</div>
               <div class="font-semibold text-gray-800">Smart/Custom Touchscreen</div>
               <div class="text-sm text-gray-500">Rp70.000.000 – Rp120.000.000+</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">☕</div>
               <div class="font-semibold text-gray-800">Mesin Kopi Otomatis</div>
               <div class="text-sm text-gray-500">Rp16.000.000 – Rp60.000.000+</div>
             </div>
-
           </div>
         </div>
 
-        <!-- CAPAIAN -->
         <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-10 rounded-3xl shadow-xl">
           <h3 class="text-xl font-bold mb-8 text-center">Capaian</h3>
           <div class="grid sm:grid-cols-4 gap-8 text-center">
-            <div>
-              <div class="text-3xl font-bold">4</div>
-              <div class="text-sm opacity-80">Pilar Inovasi</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">12x</div>
-              <div class="text-sm opacity-80">Efisiensi Profit vs Retail Konvensional</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">24/7</div>
-              <div class="text-sm opacity-80">Akses Pelanggan</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">Nasional</div>
-              <div class="text-sm opacity-80">Jawa, Bali & Kalimantan</div>
-            </div>
+            <div><div class="text-3xl font-bold">4</div><div class="text-sm opacity-80">Pilar Inovasi</div></div>
+            <div><div class="text-3xl font-bold">12x</div><div class="text-sm opacity-80">Efisiensi Profit</div></div>
+            <div><div class="text-3xl font-bold">24/7</div><div class="text-sm opacity-80">Akses Pelanggan</div></div>
+            <div><div class="text-3xl font-bold">Nasional</div><div class="text-sm opacity-80">Jawa, Bali & Kalimantan</div></div>
           </div>
         </div>
 
-        <!-- KONTAK -->
         <div class="bg-gray-50 border p-8 rounded-2xl">
           <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
           <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <div class="font-semibold text-gray-800">Email</div>
-              withvenma@gmail.com
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Website</div>
-              venma.com
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Telepon</div>
-              +62 822-1918-8835
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Lokasi</div>
-              Nasional (Jawa, Bali & Kalimantan)
-            </div>
+            <div><div class="font-semibold text-gray-800">Email</div>withvenma@gmail.com</div>
+            <div><div class="font-semibold text-gray-800">Website</div>venma.com</div>
+            <div><div class="font-semibold text-gray-800">Telepon</div>+62 822-1918-8835</div>
+            <div><div class="font-semibold text-gray-800">Lokasi</div>Nasional (Jawa, Bali & Kalimantan)</div>
           </div>
         </div>
 
-        <!-- BUTTON BACK -->
-        <div class="text-center pt-10">
-          <a href="#tenant-tahun"
-             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-yellow-500 hover:bg-yellow-600 shadow-md transition hover:scale-105">
-            ← Kembali ke Daftar Tenant
-          </a>
+        <div class="flex justify-center -mt-8 pb-4">
+          <button onclick="closeTenant('popup-venma')"
+            class="px-8 py-3 bg-yellow-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 relative z-10">
+            Tutup Detail Pop-up
+          </button>
         </div>
 
-      </div>
+      </div> </div> </div> </div> 
 
-    </div>
-  </div>
-</div>
 <!-- Tenant ASA -->
-<div id="asa" class="fade-in mb-20 scroll-mt-24">
-  <div class="bg-gray-100 py-20 px-6">
+<div id="popup-akar" onclick="closeTenant('popup-akar')" 
+     class="fixed inset-0 bg-black/60 hidden z-50 overflow-y-auto backdrop-blur-sm">
 
-    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+  <div class="flex items-start justify-center min-h-screen p-6">
+    
+    <div onclick="event.stopPropagation()" 
+         class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden relative my-8">
 
-      <!-- HEADER -->
+      <button onclick="closeTenant('popup-akar')"
+        class="absolute top-4 right-4 text-gray-500 hover:text-amber-500 text-2xl font-bold z-10">
+        ✕
+      </button>
+
       <div class="bg-gradient-to-r from-amber-400 to-yellow-600 text-white p-12">
         <h2 class="text-3xl md:text-4xl font-bold">Akar Semesta Montessori (ASA)</h2>
         <p class="mt-3 text-sm md:text-base opacity-90">
@@ -2634,22 +2584,15 @@ Innovation Hub
         </div>
       </div>
 
-      <!-- BODY -->
       <div class="p-10 md:p-14 space-y-16">
 
-        <!-- PROFIL -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Lembaga</h3>
           <p class="text-gray-600 leading-relaxed">
-            Akar Semesta Montessori (ASA) merupakan lembaga pendidikan anak
-            yang mengadopsi metode Montessori dengan pendekatan holistik.
-            Fokus utama adalah membangun kemandirian, karakter, serta
-            kecerdasan anak melalui lingkungan belajar yang terstruktur,
-            eksploratif, dan sesuai dengan tahap perkembangan usia.
+            Akar Semesta Montessori (ASA) merupakan lembaga pendidikan anak yang mengadopsi metode Montessori dengan pendekatan holistik. Fokus utama adalah membangun kemandirian, karakter, serta kecerdasan anak melalui lingkungan belajar yang terstruktur, eksploratif, dan sesuai dengan tahap perkembangan usia.
           </p>
         </div>
 
-        <!-- PROBLEM & SOLUTION -->
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
             <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
@@ -2670,104 +2613,74 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- PROGRAM -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-6">Program & Layanan</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">👶</div>
               <div class="font-semibold text-gray-800">Toddler Class</div>
               <div class="text-sm text-gray-500">Usia 2–3 Tahun</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🧒</div>
               <div class="font-semibold text-gray-800">Preschool</div>
               <div class="text-sm text-gray-500">Usia 3–6 Tahun</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">📚</div>
               <div class="font-semibold text-gray-800">Parenting Class</div>
               <div class="text-sm text-gray-500">Edukasi Orang Tua</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🎨</div>
               <div class="font-semibold text-gray-800">Creative Workshop</div>
               <div class="text-sm text-gray-500">Motorik & Sensorik</div>
             </div>
-
           </div>
         </div>
 
-        <!-- CAPAIAN -->
         <div class="bg-gradient-to-r from-amber-500 to-yellow-600 text-white p-10 rounded-3xl shadow-xl">
           <h3 class="text-xl font-bold mb-8 text-center">Capaian & Perkembangan</h3>
           <div class="grid sm:grid-cols-4 gap-8 text-center">
-            <div>
-              <div class="text-3xl font-bold">250+</div>
-              <div class="text-sm opacity-80">Siswa Terdaftar</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">4</div>
-              <div class="text-sm opacity-80">Program Aktif</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">15+</div>
-              <div class="text-sm opacity-80">Tenaga Pendidik</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">5</div>
-              <div class="text-sm opacity-80">Tahun Beroperasi</div>
-            </div>
+            <div><div class="text-3xl font-bold">250+</div><div class="text-sm opacity-80">Siswa Terdaftar</div></div>
+            <div><div class="text-3xl font-bold">4</div><div class="text-sm opacity-80">Program Aktif</div></div>
+            <div><div class="text-3xl font-bold">15+</div><div class="text-sm opacity-80">Tenaga Pendidik</div></div>
+            <div><div class="text-3xl font-bold">5</div><div class="text-sm opacity-80">Tahun Beroperasi</div></div>
           </div>
         </div>
 
-        <!-- KONTAK -->
         <div class="bg-gray-50 border p-8 rounded-2xl">
           <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
           <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <div class="font-semibold text-gray-800">Email</div>
-              info@akarsemmontessori.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Website</div>
-              www.akarsemmontessori.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Telepon</div>
-              +62 812 0000 1111
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Lokasi</div>
-              Cimahi, Jawa Barat
-            </div>
+            <div><div class="font-semibold text-gray-800">Email</div>info@akarsemmontessori.id</div>
+            <div><div class="font-semibold text-gray-800">Website</div>www.akarsemmontessori.id</div>
+            <div><div class="font-semibold text-gray-800">Telepon</div>+62 812 0000 1111</div>
+            <div><div class="font-semibold text-gray-800">Lokasi</div>Cimahi, Jawa Barat</div>
           </div>
         </div>
 
-        <!-- BUTTON BACK -->
-        <div class="text-center pt-10">
-          <a href="#tenant-tahun"
-             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-amber-500 hover:bg-amber-600 shadow-md transition hover:scale-105">
-            ← Kembali ke Daftar Tenant
-          </a>
+        <div class="flex justify-center -mt-8 pb-4">
+          <button onclick="closeTenant('popup-akar')"
+            class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 relative z-10">
+            Tutup Detail Pop-up
+          </button>
         </div>
 
-      </div>
-
-    </div>
-  </div>
-</div>
+      </div> </div> </div> </div>
      <!-- Tenant  MIR Game -->
- <div id="mir-game" class="fade-in mb-20 scroll-mt-24">
-  <div class="bg-gray-100 py-20 px-6">
+ <div id="popup-mirgames" onclick="closeTenant('popup-mirgames')" 
+     class="fixed inset-0 bg-black/60 hidden z-50 overflow-y-auto backdrop-blur-sm">
 
-    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+  <div class="flex items-start justify-center min-h-screen p-6">
+    
+    <div onclick="event.stopPropagation()" 
+         class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden relative my-8">
 
-      <!-- HEADER -->
+      <button onclick="closeTenant('popup-mirgames')"
+        class="absolute top-4 right-4 text-gray-500 hover:text-rose-600 text-2xl font-bold z-10">
+        ✕
+      </button>
+
       <div class="bg-gradient-to-r from-rose-500 to-rose-600 text-white p-12">
         <h2 class="text-3xl md:text-4xl font-bold">MIR Game Studio</h2>
         <p class="mt-3 text-sm md:text-base opacity-90">
@@ -2778,22 +2691,15 @@ Innovation Hub
         </div>
       </div>
 
-      <!-- BODY -->
       <div class="p-10 md:p-14 space-y-16">
 
-        <!-- PROFIL -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Perusahaan</h3>
           <p class="text-gray-600 leading-relaxed">
-            MIR Game Studio (PT Solusi Digital Membangun Indonesia) merupakan startup teknologi
-            yang bergerak di bidang pengembangan Game, Gamifikasi, Augmented Reality (AR),
-            dan Virtual Reality (VR). Perusahaan menghadirkan solusi digital interaktif
-            untuk sektor pendidikan, pemerintahan, dan korporasi melalui pengembangan
-            serious game, simulator VR, serta kampanye berbasis AR.
+            MIR Game Studio (PT Solusi Digital Membangun Indonesia) merupakan startup teknologi yang bergerak di bidang pengembangan Game, Gamifikasi, Augmented Reality (AR), dan Virtual Reality (VR). Perusahaan menghadirkan solusi digital interaktif untuk sektor pendidikan, pemerintahan, dan korporasi melalui pengembangan serious game, simulator VR, serta kampanye berbasis AR.
           </p>
         </div>
 
-        <!-- PROBLEM & SOLUTION -->
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
             <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
@@ -2805,7 +2711,7 @@ Innovation Hub
           </div>
 
           <div class="bg-green-50 border border-green-100 p-6 rounded-2xl">
-            <h4 class="font-semibold text-green-500 mb-3 uppercase text-sm">Solusi</h4>
+            <h4 class="font-semibold text-green-600 mb-3 uppercase text-sm">Solusi</h4>
             <ul class="text-sm text-gray-600 space-y-2">
               <li>• Serious Game edukatif</li>
               <li>• Simulator berbasis Virtual Reality</li>
@@ -2814,7 +2720,6 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- PRODUK -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -2841,72 +2746,48 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- CAPAIAN -->
         <div class="bg-gradient-to-r from-rose-600 to-rose-500 text-white p-10 rounded-3xl shadow-xl">
           <h3 class="text-xl font-bold mb-8 text-center">Capaian & Perkembangan</h3>
           <div class="grid sm:grid-cols-4 gap-8 text-center">
-            <div>
-              <div class="text-3xl font-bold">Rp 949 JT</div>
-              <div class="text-sm opacity-80">Omzet 2023–2024</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">15</div>
-              <div class="text-sm opacity-80">Proyek</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">10</div>
-              <div class="text-sm opacity-80">Partner</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">2 PT</div>
-              <div class="text-sm opacity-80">Legalitas</div>
-            </div>
+            <div><div class="text-3xl font-bold">Rp 949 JT</div><div class="text-sm opacity-80">Omzet 2023–2024</div></div>
+            <div><div class="text-3xl font-bold">15</div><div class="text-sm opacity-80">Proyek</div></div>
+            <div><div class="text-3xl font-bold">10</div><div class="text-sm opacity-80">Partner</div></div>
+            <div><div class="text-3xl font-bold">2 PT</div><div class="text-sm opacity-80">Legalitas</div></div>
           </div>
         </div>
 
-        <!-- KONTAK -->
         <div class="bg-gray-50 border p-8 rounded-2xl">
           <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
           <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <div class="font-semibold text-gray-800">Email</div>
-              fun@mirgame.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Website</div>
-              www.mirgame.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Telepon</div>
-              +62 895 7011 8774
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Lokasi</div>
-              Gedung BITC Lt. 4, Cimahi
-            </div>
+            <div><div class="font-semibold text-gray-800">Email</div>fun@mirgame.id</div>
+            <div><div class="font-semibold text-gray-800">Website</div>www.mirgame.id</div>
+            <div><div class="font-semibold text-gray-800">Telepon</div>+62 895 7011 8774</div>
+            <div><div class="font-semibold text-gray-800">Lokasi</div>Gedung BITC Lt. 4, Cimahi</div>
           </div>
         </div>
 
-        <!-- BUTTON BACK -->
-        <div class="text-center pt-10">
-          <a href="#tenant-tahun"
-             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-rose-600 hover:bg-rose-700 shadow-md transition hover:scale-105">
-            ← Kembali ke Daftar Tenant
-          </a>
+        <div class="flex justify-center -mt-8 pb-4">
+          <button onclick="closeTenant('popup-mirgames')"
+            class="px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 relative z-10">
+            Tutup Detail Pop-up
+          </button>
         </div>
 
-      </div>
-
-    </div>
-  </div>
-</div>
+      </div> </div> </div> </div>
 <!-- Tenant Bytes -->
-<div id="bytes" class="fade-in mb-20 scroll-mt-24">
-  <div class="bg-gray-100 py-20 px-6">
+<div id="popup-bytes" onclick="closeTenant('popup-bytes')" 
+     class="fixed inset-0 bg-black/60 hidden z-50 overflow-y-auto backdrop-blur-sm">
 
-    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+  <div class="flex items-start justify-center min-h-screen p-6">
+    
+    <div onclick="event.stopPropagation()" 
+         class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden relative my-8">
 
-      <!-- HEADER -->
+      <button onclick="closeTenant('popup-bytes')"
+        class="absolute top-4 right-4 text-gray-500 hover:text-sky-600 text-2xl font-bold z-10">
+        ✕
+      </button>
+
       <div class="bg-gradient-to-r from-sky-400 to-blue-500 text-white p-12">
         <h2 class="text-3xl md:text-4xl font-bold">BYTES</h2>
         <p class="mt-3 text-sm md:text-base opacity-90">
@@ -2917,22 +2798,15 @@ Innovation Hub
         </div>
       </div>
 
-      <!-- BODY -->
       <div class="p-10 md:p-14 space-y-16">
 
-        <!-- PROFIL -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-4">Profil Singkat</h3>
           <p class="text-gray-600 leading-relaxed">
-            BYTES merupakan startup teknologi yang berfokus pada pengembangan
-            perangkat lunak, sistem informasi, dan solusi digital berbasis web
-            maupun mobile. BYTES membantu bisnis, lembaga pendidikan, dan
-            institusi pemerintah dalam melakukan transformasi digital secara
-            efektif dan terukur.
+            BYTES merupakan startup teknologi yang berfokus pada pengembangan perangkat lunak, sistem informasi, dan solusi digital berbasis web maupun mobile. BYTES membantu bisnis, lembaga pendidikan, dan institusi pemerintah dalam melakukan transformasi digital secara efektif dan terukur.
           </p>
         </div>
 
-        <!-- PROBLEM & SOLUTION -->
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-red-50 border border-red-100 p-6 rounded-2xl">
             <h4 class="font-semibold text-red-500 mb-3 uppercase text-sm">Permasalahan</h4>
@@ -2953,109 +2827,69 @@ Innovation Hub
           </div>
         </div>
 
-        <!-- PRODUK & LAYANAN -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-6">Produk & Layanan</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">💻</div>
               <div class="font-semibold text-gray-800">Web Development</div>
               <div class="text-sm text-gray-500">Company Profile & System</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">📱</div>
               <div class="font-semibold text-gray-800">Mobile App</div>
               <div class="text-sm text-gray-500">Android & iOS</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">☁️</div>
               <div class="font-semibold text-gray-800">Cloud Integration</div>
               <div class="text-sm text-gray-500">Hosting & Deployment</div>
             </div>
-
             <div class="bg-white border p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div class="text-3xl mb-3">🔐</div>
               <div class="font-semibold text-gray-800">IT Security</div>
               <div class="text-sm text-gray-500">Data Protection</div>
             </div>
-
           </div>
         </div>
 
-        <!-- TARGET PASAR -->
         <div>
           <h3 class="text-xl font-bold text-gray-800 mb-4">Target Pasar</h3>
           <p class="text-gray-600 leading-relaxed">
-            UMKM, institusi pendidikan, startup digital, serta instansi
-            pemerintahan yang membutuhkan sistem informasi terintegrasi
-            dan pengembangan aplikasi berbasis teknologi terkini.
+            UMKM, institusi pendidikan, startup digital, serta instansi pemerintahan yang membutuhkan sistem informasi terintegrasi dan pengembangan aplikasi berbasis teknologi terkini.
           </p>
         </div>
 
-        <!-- CAPAIAN -->
         <div class="bg-gradient-to-r from-sky-400 to-blue-500 text-white p-10 rounded-3xl shadow-xl">
           <h3 class="text-xl font-bold mb-8 text-center">Capaian</h3>
           <div class="grid sm:grid-cols-4 gap-8 text-center">
-            <div>
-              <div class="text-3xl font-bold">40+</div>
-              <div class="text-sm opacity-80">Project Selesai</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">25+</div>
-              <div class="text-sm opacity-80">Klien Aktif</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">5</div>
-              <div class="text-sm opacity-80">Produk Sistem</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold">3</div>
-              <div class="text-sm opacity-80">Tahun Beroperasi</div>
-            </div>
+            <div><div class="text-3xl font-bold">40+</div><div class="text-sm opacity-80">Project Selesai</div></div>
+            <div><div class="text-3xl font-bold">25+</div><div class="text-sm opacity-80">Klien Aktif</div></div>
+            <div><div class="text-3xl font-bold">5</div><div class="text-sm opacity-80">Produk Sistem</div></div>
+            <div><div class="text-3xl font-bold">3</div><div class="text-sm opacity-80">Tahun Beroperasi</div></div>
           </div>
         </div>
 
-        <!-- KONTAK -->
         <div class="bg-gray-50 border p-8 rounded-2xl">
           <h3 class="text-xl font-bold text-gray-800 mb-6">Kontak</h3>
           <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <div class="font-semibold text-gray-800">Email</div>
-              info@bytes.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Website</div>
-              www.bytes.id
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Telepon</div>
-              +62 812 9876 5432
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Lokasi</div>
-              Cimahi, Jawa Barat
-            </div>
+            <div><div class="font-semibold text-gray-800">Email</div>info@bytes.id</div>
+            <div><div class="font-semibold text-gray-800">Website</div>www.bytes.id</div>
+            <div><div class="font-semibold text-gray-800">Telepon</div>+62 812 9876 5432</div>
+            <div><div class="font-semibold text-gray-800">Lokasi</div>Cimahi, Jawa Barat</div>
           </div>
         </div>
 
-        <!-- BUTTON BACK -->
-        <div class="text-center pt-10">
-          <a href="#tenant-tahun"
-             class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-sky-500 hover:bg-sky-600 shadow-md transition hover:scale-105">
-            ← Kembali ke Daftar Tenant
-          </a>
+        <div class="flex justify-center -mt-8 pb-4">
+          <button onclick="closeTenant('popup-bytes')"
+            class="px-8 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 relative z-10">
+            Tutup Detail Pop-up
+          </button>
         </div>
 
-      </div>
+      </div> </div> </div> </div>
 
-    </div>
-  </div>
-</div>
-
-      
+<!-- buat manggil popup -->
 <div id="tenantPopup" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
 <div class="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 relative">
 
@@ -3075,15 +2909,24 @@ Tutup
 
 </div>
 </div>
-<!-- More Tenants indicator -->
+
+   <!-- <section id="tenant" class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Portfolio</span>
+      <h2 class="fade-in text-3xl sm:text-4xl font-bold text-primary mb-2">Profil Tenant</h2>
+      <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+      <p class="fade-in text-gray-600 max-w-2xl mx-auto">Detail lengkap setiap tenant inkubasi</p>
+     </div>
+     More Tenants indicator
      <div class="text-center">
       <p class="text-gray-500 mb-4">Dan masih banyak tenant lainnya...</p>
       <div class="flex justify-center gap-3"><span class="w-3 h-3 bg-primary rounded-full"></span> <span class="w-3 h-3 bg-accent rounded-full"></span> <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
       </div>
      </div>
     </div>
-   </section><!-- Divider -->
-   <div class="section-divider max-w-6xl mx-auto"></div><!-- Penutup -->
+   </section> Divider 
+   <div class="section-divider max-w-6xl mx-auto"></div> -->
+   <!-- Penutup -->
    <section id="penutup" class="py-20 lg:py-32 bg-light">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="text-center mb-12"><span class="fade-in inline-block px-4 py-1 bg-accent/10 text-primary text-sm font-medium rounded-full mb-4">Penutup</span>
@@ -3314,5 +3157,17 @@ document.getElementById("tenantPopup").classList.add("hidden");
 .survey-btn:hover{
   background: #1e40af;
 }
-</style></body>
+</style>
+<script>
+
+function openTenant(id) {
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function closeTenant(id) {
+  document.getElementById(id).classList.add("hidden");
+}
+
+</script>
+</body>
 </html>
